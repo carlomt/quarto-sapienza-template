@@ -1,6 +1,6 @@
 # Quarto Sapienza Template
 
-Un modello Quarto Revealjs per presentazioni scientifiche e accademiche, derivato dalla presentazione G4-Med Bordeaux.
+Un modello Quarto Revealjs per presentazioni.
 
 Fondo bianco, titoli leggeri, testo grigio, accenti bordeaux e copertina con logo Sapienza. Formato 16:9, senza animazioni. Il tema usa font di sistema e non richiede font remoti.
 
@@ -119,18 +119,6 @@ Per formule LaTeX, sostituisci `html-math-method: plain` in `_quarto.yml` con un
 Il workflow compila le slide a ogni push, pull request o avvio manuale. Nella pagina della run trovi l'artefatto **slides-html**, conservato per 30 giorni. Gli output compilati non vengono aggiunti alla storia Git.
 
 È una compilazione con artefatto scaricabile. Per avere un URL pubblico della presentazione puoi aggiungere successivamente la pubblicazione con GitHub Pages. [Documentazione Quarto](https://quarto.org/docs/publishing/github-pages.html).
-
-## Trasformare questa cartella in un repository template
-
-Nome suggerito: **quarto-sapienza-template**.
-
-1. Crea un repository nel tuo account e carica questa struttura, inclusi `.github` e `.gitignore`.
-2. In **Settings → General** seleziona **Template repository**.
-3. Per ogni intervento usa **Use this template** e assegna un nuovo nome al repository.
-
-[Documentazione GitHub sui repository template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository).
-
-Un repository per presentazione mantiene contenuti e cronologia separati. Gli aggiornamenti al modello non si propagano automaticamente alle presentazioni già create: puoi riportare successivamente le modifiche desiderate alla cartella `theme/`. Se vorrai distribuire frequentemente nuove versioni del tema a molte presentazioni, un'estensione Quarto separata sarà il passo successivo.
 
 ## PDF
 
