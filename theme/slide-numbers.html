@@ -1,0 +1,24 @@
+<script>
+// Conta le slide in base alle classi, senza una soglia fissa per i backup.
+// Reveal usa la stessa funzione anche per la numerazione in stampa.
+(function () {
+  function slideLabel(slide) {
+    const slides = Reveal.getSlides();
+    if (slide.matches('.cover, .unnumbered')) return [''];
+    if (slide.classList.contains('backup')) {
+      const backups = slides.filter(s => s.classList.contains('backup') &&
+        !s.matches('.cover, .unnumbered'));
+      return ['B' + (backups.indexOf(slide) + 1)];
+    }
+    const main = slides.filter(s => !s.matches('.cover, .unnumbered, .backup'));
+    return [main.indexOf(slide) + 1];
+  }
+  function configureNumbering() {
+    Reveal.configure({ slideNumber: slideLabel });
+  }
+  if (typeof Reveal !== 'undefined') {
+    if (Reveal.isReady()) configureNumbering();
+    else Reveal.on('ready', configureNumbering);
+  }
+})();
+</script>

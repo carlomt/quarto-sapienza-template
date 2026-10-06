@@ -1,0 +1,33 @@
+project:
+  type: default
+  output-dir: _output
+  render:
+    - slides.qmd
+
+format:
+  revealjs:
+    theme: theme/sapienza.scss
+    width: 1600
+    height: 900
+    margin: 0
+    center: false
+    auto-stretch: false
+    slide-level: 2
+    transition: none
+    background-transition: none
+    slide-number: c
+    show-slide-number: all
+    controls: false
+    progress: false
+    hash: true
+    navigation-mode: linear
+    incremental: false
+    embed-resources: true
+    html-math-method: plain
+    highlight-style: github
+    code-copy: false
+    code-overflow: wrap
+    pdf-separate-fragments: false
+    pdf-max-pages-per-slide: 1
+    show-notes: false
+    include-after-body: theme/slide-numbers.html

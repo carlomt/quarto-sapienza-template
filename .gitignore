@@ -1,0 +1,19 @@
+# Quarto output and caches
+/_output/
+/.quarto/
+/.quarto-cache/
+/*_files/
+
+# Operating system and local editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+
+**/*.quarto_ipynb

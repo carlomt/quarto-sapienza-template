@@ -1,0 +1,220 @@
+---
+# Modifica questi campi per ogni nuova presentazione.
+# Usa pagetitle (non title) per evitare una seconda copertina automatica.
+pagetitle: "Titolo della presentazione"
+author: "Nome Cognome"
+email: "nome@example.org"
+event: "Nome del convegno · Città"
+event-date: "Giorno mese anno"
+lang: it
+---
+
+## {.cover .unnumbered data-state="cover"}
+
+![Sapienza Università di Roma](assets/logo-sapienza.png){.cover-logo}
+
+::: {.cover-content}
+::: {.cover-title}
+{{< meta pagetitle >}}
+:::
+::: {.cover-subtitle}
+{{< meta author >}}<br>
+{{< meta email >}}
+:::
+:::
+
+::: {.cover-event}
+{{< meta event >}}<br>
+{{< meta event-date >}}
+:::
+
+::: notes
+[00:00–00:30]
+
+Presenta il tema e il risultato principale che vuoi lasciare al pubblico.
+Le note non compaiono sulla slide. Premi S nella presentazione per aprire la vista relatore.
+:::
+
+## Il messaggio principale
+
+::: {.lead}
+Una frase breve chiarisce il punto centrale della slide.
+:::
+
+- Il primo elemento fornisce il contesto.
+- Il secondo presenta il risultato o l'evidenza.
+- Il terzo spiega perché il risultato conta.
+
+::: {.takeaway}
+Una conclusione breve da ricordare.
+:::
+
+::: {.source}
+Autore, titolo della fonte, anno. Aggiungi un collegamento verificato.
+:::
+
+::: notes
+[00:30–01:30]
+
+Spiega il messaggio con un esempio. Inserisci qui dettagli, riferimenti e passaggi che non servono sullo schermo.
+:::
+
+## Due colonne
+
+::: {.columns}
+::: {.column width="53%"}
+### Prima prospettiva
+
+- Un elemento da confrontare.
+- Un secondo elemento.
+- Un dettaglio significativo.
+:::
+::: {.column width="43%"}
+### Seconda prospettiva
+
+- Il corrispondente confronto.
+- Una differenza rilevante.
+- La conseguenza pratica.
+:::
+:::
+
+::: {.takeaway}
+Le due colonne aiutano a confrontare informazioni parallele.
+:::
+
+::: notes
+Non riempire entrambe le colonne con paragrafi lunghi. Il tema lascia spazio fra i contenuti.
+:::
+
+## Una tabella di confronto {.compact-table}
+
+| Aspetto | Configurazione A | Configurazione B |
+|:--|:--|:--|
+| Obiettivo | Descrizione breve | Descrizione breve |
+| Metodo | Metodo adottato | Metodo alternativo |
+| Risultato | Dato con unità | Dato con unità |
+| Limite | Limite rilevante | Limite rilevante |
+
+::: {.takeaway}
+Rendi esplicito ciò che il confronto permette di concludere.
+:::
+
+::: {.small}
+Indica condizioni, unità e incertezze quando influenzano il confronto.
+:::
+
+::: notes
+Sostituisci i segnaposto con dati verificati. La classe compact-table riduce gli spazi nelle tabelle più dense.
+:::
+
+## Un processo in cinque passaggi
+
+::: {.process}
+| Passaggio | Attività | Risultato |
+|:--|:--|:--|
+| **1 · Definizione** | Identificare obiettivo e condizioni | Specifica |
+| **2 · Preparazione** | Raccogliere dati e strumenti | Input |
+| **3 · Esecuzione** | Applicare il metodo | Output |
+| **4 · Verifica** | Confrontare con un riferimento | Evidenza |
+| **5 · Condivisione** | Documentare il risultato | Materiale riusabile |
+:::
+
+::: notes
+Questo è un layout di esempio. Mantieni i nomi dei passaggi brevi e usa la spiegazione orale per le dipendenze.
+:::
+
+## Una figura e il suo significato
+
+::: {.columns}
+::: {.column width="40%"}
+- Descrivi l'osservabile.
+- Specifica le condizioni.
+- Evidenzia il risultato.
+- Cita il limite principale.
+:::
+::: {.column width="56%"}
+::: {.figure-placeholder}
+Inserisci qui la tua figura<br>
+SVG o PNG ad alta risoluzione
+:::
+
+::: {.source}
+Fonte della figura e breve didascalia.
+:::
+:::
+:::
+
+::: notes
+Sostituisci il blocco figure-placeholder con:
+
+`![Descrizione accessibile](assets/figura.svg){.side-image}`
+
+Per una figura a tutta larghezza usa la classe figure-wide. I grafici devono avere assi, unità, legenda e caratteri leggibili.
+:::
+
+## Un esempio di codice
+
+::: {.small}
+Mostra soltanto le righe necessarie a spiegare l'operazione.
+:::
+
+```bash
+# Compila la presentazione.
+quarto render
+
+# Avvia l'anteprima locale.
+quarto preview slides.qmd
+```
+
+::: {.takeaway}
+Il codice completa la spiegazione, senza sostituirla.
+:::
+
+::: notes
+Le immagini e il tema sono incorporati nell'HTML. Per modificare il contenuto usa slides.qmd; per modificare lo stile usa theme/sapienza.scss.
+:::
+
+## Conclusioni
+
+::: {.closing-lead}
+Il risultato principale della presentazione,<br>
+espresso in una frase concreta.
+:::
+
+- La prima evidenza che lo sostiene.
+- La seconda evidenza o implicazione.
+- Il prossimo passo proposto.
+
+::: {.closing-contact}
+Grazie<br>
+{{< meta author >}}<br>
+{{< meta email >}}
+:::
+
+::: notes
+Chiudi riprendendo il messaggio iniziale. Le slide di backup che seguono sono riservate alle domande.
+:::
+
+## Backup · Approfondimento {.backup}
+
+- Un dettaglio utile per rispondere alle domande.
+- Una condizione o un'ipotesi del metodo.
+- Una fonte aggiuntiva.
+
+::: {.small}
+La classe backup genera automaticamente la numerazione B1, B2, …
+:::
+
+::: notes
+Questa slide non fa parte del percorso principale. Puoi aggiungere o rimuovere slide senza modificare la numerazione a mano.
+:::
+
+## Backup · Riferimenti {.backup .references}
+
+- Autore, *titolo del primo riferimento*, anno.
+- Autore, *titolo del secondo riferimento*, anno.
+- Repository, dataset o documentazione del metodo.
+
+::: notes
+Sostituisci gli esempi con riferimenti reali e collegamenti verificati.
+:::
